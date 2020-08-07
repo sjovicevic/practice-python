@@ -1,11 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 
-r = requests.get('https://www.nytimes.com')
-soup = BeautifulSoup(r.text, 'html.parser')
+webpage = requests.get('https://www.nytimes.com')
+soup = BeautifulSoup(webpage.text, 'lxml')
 
-for story_heading in soup.find_all(class_="story-heading"): 
-    if story_heading.a: 
-        print(story_heading.a.text.replace("\n", " ").strip())
-    else: 
-        print(story_heading.contents[0].strip())
+for heading in soup.find_all("h2", class_="e1voiwgp0"):
+    if heading.h2:
+        print(heading.h2.text.replace_with("\n", ' '.strip('<>')))
+    else:
+        print(heading.contents[0].strip('<>'))
+
+
+
+
