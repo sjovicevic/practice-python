@@ -8,6 +8,5 @@ for heading in soup.find_all("h2", class_="e1voiwgp0"):
     if heading.h2:
         print(heading.h2.text.replace_with("\n", ' '.strip('<>')))
     else:
-        print(heading.contents[0].strip('<>'))
-
+        print(heading.string)
 
