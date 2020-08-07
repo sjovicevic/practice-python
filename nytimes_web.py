@@ -11,5 +11,3 @@ for heading in soup.find_all("h2", class_="e1voiwgp0"):
         print(heading.contents[0].strip('<>'))
 
 
-
-
