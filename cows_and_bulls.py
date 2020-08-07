@@ -1,5 +1,6 @@
-import random
+# Fun game of cows and bulls (I made it to work, I don't know how efficient it is)
 
+import random
 
 def game(number, guess):
     cows = 0
