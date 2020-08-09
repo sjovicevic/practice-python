@@ -3,22 +3,18 @@
 
 import random 
 
-def game(computer_guess, my_number, start, end):
+def game(computer_guess, my_number, start, end, first_guess):
     
-    try: 
+    try:
         mid = (start + end) // 2
-
-        
-
-        
         if computer_guess == my_number:
             return computer_guess
         
         user_input = input(f'I say {computer_guess}, up or down? >>> ')
         if user_input.lower() == 'down':
-            return game(random.randint(1,computer_guess), my_number, start, computer_guess - 1)
+            return game(random.randint(1,computer_guess), my_number, start, computer_guess - 1, first_guess)
         elif user_input.lower() == 'up':
-            return game(random.randint(computer_guess+1, 101), my_number, computer_guess + 1, end)
+            return game(random.randint(computer_guess+1, 101), my_number, computer_guess + 1, end, first_guess)
         else:
             return -1
     except:
@@ -26,5 +22,6 @@ def game(computer_guess, my_number, start, end):
 
 guess = random.randint(0, 101)
 my_number = 96
-print(f"Looks like I found your secret number, its {game(random.randint(1,100), my_number, 0, 100)}!")
+first_guess = random.randint(1,100)
+print(f"Looks like I found your secret number, its {game(first_guess, my_number, 0, 100, first_guess)}!")
 
