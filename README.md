@@ -2,7 +2,7 @@
 
 ## practicepython.org 
 
-Solutions for bunch of mini projects or questions from [practicepython.org](practicepython.org)
+Solutions for bunch of mini projects or questions from [practicepython.org](https://www.practicepython.org/)
 
 ## other interesting solutions
 
