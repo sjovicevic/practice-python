@@ -8,4 +8,6 @@ def merge_list(arr1, arr2):
 arr1 = [1,2,3]
 arr2 = [4,5,6]
 
-print(merge_list(arr1, arr2))
+print(merge_list(arr1, arr))
+
+    
